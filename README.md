@@ -3,9 +3,9 @@
 <p align="center">
   <a href="https://www.cypress.io">
     <picture>
-      <source media="(prefers-color-scheme: dark)"  srcset="./assets/cypress-logo-dark.png">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cypress-logo-light.png">
-      <img alt="Cypress Logo" src="./assets/cypress-logo-light.png">
+      <source media="(prefers-color-scheme: dark)"  srcset="./doc/assets/cypress-logo-dark.png">
+      <source media="(prefers-color-scheme: light)" srcset="./doc/assets/cypress-logo-light.png">
+      <img alt="Cypress Logo" src="./doc/assets/cypress-logo-light.png">
     </picture>    
   </a>
 </p>
