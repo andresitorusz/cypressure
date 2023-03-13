@@ -1,0 +1,16 @@
+{
+  "id": "One",
+  "name": "Bianq",
+  "category": {
+    "id": "One",
+    "name": "dog"
+  },
+  "photoUrls": ["photo_url"],
+  "tags": [
+    {
+      "id": "Zero",
+      "name": "pet"
+    }
+  ],
+  "status": "available"
+}
