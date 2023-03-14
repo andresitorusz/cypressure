@@ -28,13 +28,16 @@
 
 
 ### Run tests
-1. Navigate to app you want to test, e.g. `petstore`.
+1. Navigate to app you want to test, e.g. `app/petstore`.
 2. Install the **node_modules** by running `npm install`.
 3. Run `npm run cy` or `npx cypress open` to open the test UI.
 4. Run the tests.
 
 
 ### Misc
+##### App list
+- [Petstore](https://petstore3.swagger.io/) 
+
 ##### IDE setup and recommended extensions
 [VS Code](https://code.visualstudio.com/download) with following extensions:
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
