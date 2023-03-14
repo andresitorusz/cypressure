@@ -18,8 +18,8 @@
 
 ### Setup
 ##### Prerequisites
-1. Any IDE.
-2. NodeJS at least v19.6.0.
+- Any IDE.
+- NodeJS at least v19.6.0.
 
 
 ##### Steps
