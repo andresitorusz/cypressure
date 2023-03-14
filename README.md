@@ -24,14 +24,14 @@
 
 ##### Steps
 1. Run `git clone https://github.com/helenanull/cypress-example.git` in your Terminal.
-2. Run `cd learning-cypress`. In learning **learning-cypress** folder, there will be several app.
+2. Run `cd learning-cypress/app`. Notice that, in the learning **learning-cypress** folder, there will folder named **app**, and in this **app** folder there will be several apps.
+3. Run `cd <appname>` to navigate to the app you want to test, e.g. `app/petstore`.
 
 
 ### Run tests
-1. Navigate to app you want to test, e.g. `app/petstore`.
-2. Install the **node_modules** by running `npm install`.
-3. Run `npm run cy` or `npx cypress open` to open the test UI.
-4. Run the tests.
+1. After navigating to the app you want to test. Then, install the **node_modules** by running `npm install`.
+2. Run `npm run cy` or `npx cypress open` to open the test UI.
+3. Run the tests.
 
 
 ### Misc
