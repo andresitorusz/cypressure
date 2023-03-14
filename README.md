@@ -1,4 +1,4 @@
-# Learning Cypress
+# Cypressure - Learning Cypress
 
 <p align="center">
   <a href="https://www.cypress.io">
