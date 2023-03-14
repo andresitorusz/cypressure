@@ -23,7 +23,7 @@
 
 
 ##### Steps
-1. Run `git clone https://github.com/helenanull/cypress-example.git` in your Terminal.
+1. Run `git clone https://github.com/andresitorusz/cypressure.git` in your Terminal.
 2. Run `cd learning-cypress/app`. Notice that, in the learning **learning-cypress** folder, there will folder named **app**, and in this **app** folder there will be several apps.
 3. Run `cd <appname>` to navigate to the app you want to test, e.g. `app/petstore`.
 
