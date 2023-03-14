@@ -37,10 +37,10 @@
 ### Misc
 ##### IDE setup and recommended extensions
 [VS Code](https://code.visualstudio.com/download) with following extensions:
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-- [Add Only](https://marketplace.visualstudio.com/items?itemName=ub1que.add-only).
-- [Mocha snippets](https://marketplace.visualstudio.com/items?itemName=spoonscen.es6-mocha-snippets).
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Add Only](https://marketplace.visualstudio.com/items?itemName=ub1que.add-only)
+- [Mocha snippets](https://marketplace.visualstudio.com/items?itemName=spoonscen.es6-mocha-snippets)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 
 ### Q&A
@@ -48,5 +48,5 @@ TBD
 
 ### Reference
 
-1. [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress).
-2. [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test).
+1. [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
+2. [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
