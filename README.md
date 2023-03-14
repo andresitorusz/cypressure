@@ -18,8 +18,8 @@
 
 ### Setup
 ##### Prerequisites
-- Any IDE.
-- NodeJS at least v19.6.0.
+1. Any IDE.
+2. NodeJS at least v19.6.0.
 
 
 ##### Steps
@@ -36,7 +36,8 @@
 
 ### Misc
 ##### App list
-- [Petstore](https://petstore3.swagger.io/) 
+- [Petstore](https://petstore3.swagger.io/)
+- ...
 
 ##### IDE setup and recommended extensions
 [VS Code](https://code.visualstudio.com/download) with following extensions:
@@ -47,9 +48,9 @@
 
 
 ### Q&A
-TBD
+- ...
 
 ### Reference
 
-1. [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
-2. [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
+- [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
+- [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
