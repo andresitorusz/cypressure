@@ -8,46 +8,45 @@ import {
   INPUT_ERROR,
 } from "../consts/pet";
 
-beforeEach(function () {
-  // Retrieve body from fixtures based on test case
-  cy.fixture("pet/valid-pet").then((body) => {
-    this.body = body;
+describe("PUT /pet API", () => {
+  beforeEach(function () {
+    // Retrieve body from fixtures based on test case
+    cy.fixture("pet/valid-pet").then((body) => {
+      this.body = body;
+      cy.log("Retrieve valid pet");
 
-    // TODO: Check this weird flow, TC INVALID_ID_SUPPLIED, q: why INVALID_ID_SUPPLIED passed to createPet() func
-    // Create a costume pet that will be updated
-    cy.createPet(body);
+      // Create a costume pet that will be updated
+      cy.createPet(body);
 
+      switch (Cypress.currentTest.title) {
+        case PET_NOT_FOUND:
+          // Cleanup the created pet after successfully creating a pet
+          cy.deletePetById(this.body.id);
+          break;
+
+        case INVALID_ID_SUPPLIED:
+          cy.log(`Update pet id to ${PET_INVALID_ID}`);
+          body.id = PET_INVALID_ID;
+          break;
+
+        default:
+          cy.log(`Update pet name to ${PET_NAME_UPDATED}`);
+          body.name = PET_NAME_UPDATED;
+          break;
+      }
+    });
+  });
+
+  afterEach(function () {
     switch (Cypress.currentTest.title) {
-      case PET_NOT_FOUND:
-        cy.log(`TC: ${PET_NOT_FOUND}`);
-        // Cleanup the created pet after successfully creating a pet
-        cy.deletePetById(this.body.id);
-        break;
-
       case INVALID_ID_SUPPLIED:
-        cy.log(`TC: ${INVALID_ID_SUPPLIED}`);
-        body.id = PET_INVALID_ID;
         break;
-
       default:
-        // Update a single key value in the pet body
-        body.name = PET_NAME_UPDATED;
+        cy.deletePetById(this.body.id);
         break;
     }
   });
-});
 
-afterEach(function () {
-  switch (Cypress.currentTest.title) {
-    case INVALID_ID_SUPPLIED:
-      break;
-    default:
-      cy.deletePetById(this.body.id);
-      break;
-  }
-});
-
-describe("PUT /pet API", () => {
   it(SUCCESSFUL_UPDATE, function () {
     cy.request({
       method: "PUT",

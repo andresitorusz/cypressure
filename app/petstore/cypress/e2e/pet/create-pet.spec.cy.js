@@ -9,15 +9,18 @@ describe("POST /pet API", () => {
   beforeEach(function () {
     switch (Cypress.currentTest.title) {
       case BAD_REQUEST:
-        // Retrieve body from fixtures based on test case
+        cy.log("Retrieve invalid pet");
         cy.fixture("pet/invalid-pet").then((body) => {
           this.body = body;
+          cy.log(`Body: ${JSON.stringify(body)}`);
         });
         break;
 
       case SUCCESSFUL_CREATE:
+        cy.log("Retrieve valid pet");
         cy.fixture("pet/valid-pet").then((body) => {
           this.body = body;
+          cy.log(`Body: ${JSON.stringify(body)}`);
         });
         break;
 

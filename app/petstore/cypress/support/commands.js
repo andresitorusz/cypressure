@@ -27,7 +27,7 @@
 const BASE_URL = Cypress.env("BASE_URL") + Cypress.env("PET") + "/";
 
 Cypress.Commands.add("deletePetById", (petId) => {
-  cy.log(`Delete a pet with id equals to ${petId}`);
+  cy.log(`Delete a pet with id ${petId}`);
 
   cy.request({
     method: "DELETE",
