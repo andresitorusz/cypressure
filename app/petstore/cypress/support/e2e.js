@@ -18,3 +18,6 @@ import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// For JSON schema validation
+chai.use(require("chai-json-schema"));

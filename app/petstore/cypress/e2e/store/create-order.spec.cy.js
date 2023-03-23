@@ -1,42 +1,28 @@
 import {
-  SUCCESSFUL_CREATE,
-  BAD_REQUEST,
   BASE_URL,
+  SUCCESSFUL_CREATE,
+  ORDER_ENDPOINT,
   INPUT_ERROR,
-} from "../consts/pet";
+  BAD_REQUEST,
+} from "../consts/store";
 
-describe("POST /pet API", () => {
+describe("POST /store/order API", () => {
   beforeEach(function () {
     switch (Cypress.currentTest.title) {
       case BAD_REQUEST:
-        cy.log("Retrieving invalid pet");
-        cy.fixture("pet/invalid-pet").then((body) => {
+        cy.log("Retrieving invalid order");
+        cy.fixture("store/invalid-order").then((body) => {
           this.body = body;
           cy.log(`Body: ${JSON.stringify(body)}`);
         });
         break;
 
       case SUCCESSFUL_CREATE:
-        cy.log("Retrieving valid pet");
-        cy.fixture("pet/valid-pet").then((body) => {
+        cy.log("Retrieving valid order");
+        cy.fixture("store/valid-order").then((body) => {
           this.body = body;
           cy.log(`Body: ${JSON.stringify(body)}`);
         });
-        break;
-
-      default:
-        break;
-    }
-  });
-
-  afterEach(function () {
-    switch (Cypress.currentTest.title) {
-      case BAD_REQUEST:
-        break;
-
-      case SUCCESSFUL_CREATE:
-        // Cleanup the created pet after successfully creating a pet
-        cy.deletePetById(this.body.id);
         break;
 
       default:
@@ -45,21 +31,24 @@ describe("POST /pet API", () => {
   });
 
   it(SUCCESSFUL_CREATE, function () {
-    cy.log(`Creating a pet with body ${JSON.stringify(this.body)}`);
+    cy.log(`Creating an order with body ${JSON.stringify(this.body)}`);
     cy.request({
       method: "POST",
-      url: BASE_URL,
+      url: BASE_URL + ORDER_ENDPOINT,
       body: this.body,
     }).then((response) => {
       expect(response.status).to.equal(200);
+      expect(response.body.id).to.equal(this.body.id);
+      expect(response.body.petId).to.equal(this.body.petId);
+      expect(response.body.quantity).to.equal(this.body.quantity);
     });
   });
 
   it(BAD_REQUEST, function () {
-    cy.log(`Creating a pet with body ${JSON.stringify(this.body)}`);
+    cy.log(`Creating an order with body ${JSON.stringify(this.body)}`);
     cy.request({
       method: "POST",
-      url: BASE_URL,
+      url: BASE_URL + ORDER_ENDPOINT,
       body: this.body,
       failOnStatusCode: false,
     }).then((response) => {

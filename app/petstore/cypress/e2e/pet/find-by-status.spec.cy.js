@@ -4,13 +4,14 @@ import {
   BASE_URL,
   PET_STATUS,
   INVALID_STATUS_VALUE,
+  INVALID_PET_STATUS,
 } from "../consts/pet";
 
 describe("GET /pet/findByStatus API", () => {
   it(SUCCESSFUL_FIND, function () {
     // Iterate over array valid pet status and hit findByStatus API
     cy.wrap(PET_STATUS).each((petStatus) => {
-      cy.log(`Requesting pet with status: ${petStatus}`);
+      cy.log(`Requesting pet with status ${petStatus}`);
       cy.request({
         method: "GET",
         url: BASE_URL + FIND_BY_STATUS_ENDPOINT,
@@ -34,7 +35,7 @@ describe("GET /pet/findByStatus API", () => {
   });
 
   it(INVALID_STATUS_VALUE, function () {
-    cy.log(`Requesting pet with status: ${INVALID_STATUS_VALUE}`);
+    cy.log(`Requesting pet with status ${INVALID_PET_STATUS}`);
     cy.request({
       method: "GET",
       url: BASE_URL + FIND_BY_STATUS_ENDPOINT,
