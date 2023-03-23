@@ -24,28 +24,46 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-const BASE_URL = Cypress.env("BASE_URL") + Cypress.env("PET") + "/";
-
-Cypress.Commands.add("deletePetById", (petId) => {
-  cy.log(`Delete a pet with id ${petId}`);
-
-  cy.request({
-    method: "DELETE",
-    url: BASE_URL + petId,
-  });
-});
+const BASE_URL = Cypress.env("BASE_URL");
+const PET_ENDPOINT = Cypress.env("PET") + "/";
+const ORDER_ENDPOINT = Cypress.env("STORE") + Cypress.env("ORDER") + "/";
 
 Cypress.Commands.add("createPet", (body) => {
-  cy.log(`Create a pet with body: ${JSON.stringify(body)}`);
+  cy.log(`Creating a pet with body: ${JSON.stringify(body)}`);
 
   cy.request({
     method: "POST",
-    url: BASE_URL,
+    url: BASE_URL + PET_ENDPOINT,
     body: body,
     failOnStatusCode: false,
   });
 });
 
-Cypress.Commands.add("randomInt", (min, max) => {
-  return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
+Cypress.Commands.add("deletePetById", (petId) => {
+  cy.log(`Deleting a pet with id ${petId}`);
+
+  cy.request({
+    method: "DELETE",
+    url: BASE_URL + PET_ENDPOINT + petId,
+  });
+});
+
+Cypress.Commands.add("createOrder", (body) => {
+  cy.log(`Creating an order with body: ${JSON.stringify(body)}`);
+
+  cy.request({
+    method: "POST",
+    url: BASE_URL + ORDER_ENDPOINT,
+    body: body,
+    failOnStatusCode: false,
+  });
+});
+
+Cypress.Commands.add("deleteOrderById", (orderId) => {
+  cy.log(`Deleting an order with body: ${JSON.stringify(orderId)}`);
+
+  cy.request({
+    method: "DELETE",
+    url: BASE_URL + ORDER_ENDPOINT + orderId,
+  });
 });

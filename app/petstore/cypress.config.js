@@ -11,7 +11,14 @@ module.exports = defineConfig({
   },
   env: {
     BASE_URL: "https://petstore3.swagger.io/api/v3",
+
+    // Pet
     PET: "/pet",
     FIND_BY_STATUS: "/findByStatus",
+
+    // Store
+    STORE: "/store",
+    INVENTORY: "/inventory",
+    ORDER: "/order",
   },
 });
