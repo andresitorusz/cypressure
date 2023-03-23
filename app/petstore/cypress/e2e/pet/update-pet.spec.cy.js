@@ -13,7 +13,7 @@ describe("PUT /pet API", () => {
     // Retrieve body from fixtures based on test case
     cy.fixture("pet/valid-pet").then((body) => {
       this.body = body;
-      cy.log("Retrieve valid pet");
+      cy.log("Retrieving valid pet");
 
       // Create a costume pet that will be updated
       cy.createPet(body);
@@ -25,12 +25,12 @@ describe("PUT /pet API", () => {
           break;
 
         case INVALID_ID_SUPPLIED:
-          cy.log(`Update pet id to ${PET_INVALID_ID}`);
+          cy.log(`Updating pet id to ${PET_INVALID_ID}`);
           body.id = PET_INVALID_ID;
           break;
 
         default:
-          cy.log(`Update pet name to ${PET_NAME_UPDATED}`);
+          cy.log(`Updating pet name to ${PET_NAME_UPDATED}`);
           body.name = PET_NAME_UPDATED;
           break;
       }
@@ -41,6 +41,8 @@ describe("PUT /pet API", () => {
     switch (Cypress.currentTest.title) {
       case INVALID_ID_SUPPLIED:
         break;
+      case PET_NOT_FOUND:
+        break;
       default:
         cy.deletePetById(this.body.id);
         break;
@@ -48,6 +50,7 @@ describe("PUT /pet API", () => {
   });
 
   it(SUCCESSFUL_UPDATE, function () {
+    cy.log(`Updating pet to ${JSON.stringify(this.body)}`);
     cy.request({
       method: "PUT",
       url: BASE_URL,
@@ -59,6 +62,7 @@ describe("PUT /pet API", () => {
   });
 
   it(PET_NOT_FOUND, function () {
+    cy.log(`Updating pet to ${JSON.stringify(this.body)}`);
     cy.request({
       method: "PUT",
       url: BASE_URL,
@@ -70,8 +74,7 @@ describe("PUT /pet API", () => {
   });
 
   it(INVALID_ID_SUPPLIED, function () {
-    cy.log(JSON.stringify(this.body));
-
+    cy.log(`Updating pet to ${JSON.stringify(this.body)}`);
     cy.request({
       method: "PUT",
       url: BASE_URL,

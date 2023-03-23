@@ -5,11 +5,9 @@ export const SUCCESSFUL_FIND = "200 OK";
 
 export const BAD_REQUEST = "400 Bad Request";
 
-// Update TC
 export const PET_NOT_FOUND = "404 Pet Not Found";
 export const INVALID_ID_SUPPLIED = "400 Invalid ID Supplied";
 
-// Find By Status TC
 export const INVALID_STATUS_VALUE = "400 Invalid Status Value";
 
 // Pet

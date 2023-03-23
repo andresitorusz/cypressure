@@ -9,7 +9,7 @@ describe("POST /pet API", () => {
   beforeEach(function () {
     switch (Cypress.currentTest.title) {
       case BAD_REQUEST:
-        cy.log("Retrieve invalid pet");
+        cy.log("Retrieving invalid pet");
         cy.fixture("pet/invalid-pet").then((body) => {
           this.body = body;
           cy.log(`Body: ${JSON.stringify(body)}`);
@@ -17,7 +17,7 @@ describe("POST /pet API", () => {
         break;
 
       case SUCCESSFUL_CREATE:
-        cy.log("Retrieve valid pet");
+        cy.log("Retrieving valid pet");
         cy.fixture("pet/valid-pet").then((body) => {
           this.body = body;
           cy.log(`Body: ${JSON.stringify(body)}`);
@@ -45,6 +45,7 @@ describe("POST /pet API", () => {
   });
 
   it(SUCCESSFUL_CREATE, function () {
+    cy.log(`Creating a pet with body ${JSON.stringify(this.body)}`);
     cy.request({
       method: "POST",
       url: BASE_URL,
@@ -55,6 +56,7 @@ describe("POST /pet API", () => {
   });
 
   it(BAD_REQUEST, function () {
+    cy.log(`Creating a pet with body ${JSON.stringify(this.body)}`);
     cy.request({
       method: "POST",
       url: BASE_URL,
