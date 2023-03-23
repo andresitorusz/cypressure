@@ -4,5 +4,8 @@
   },
   "scripts": {
     "cy": "cypress open"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1"
   }
 }
