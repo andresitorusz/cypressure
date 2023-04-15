@@ -22,7 +22,7 @@ Read the setup and how to run guide in the app folder **README**.
 
 ### Misc
 ##### App list
-- [Petstore](https://petstore3.swagger.io/)
+- [Swagger Petstore - OpenAPI 3.0](https://petstore3.swagger.io/)
 - ...
 
 ##### IDE setup and recommended extensions
