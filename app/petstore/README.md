@@ -20,3 +20,8 @@
 2. Install the **node_modules** by running `npm install`.
 3. Run `npm run cy` or `npx cypress open` to open the test UI.
 4. Run the tests.
+
+### Result
+Here is the example result if you run the tests.
+
+![image](https://user-images.githubusercontent.com/36465150/232238672-842c445a-6405-42c6-8cd2-a87513116e0f.png)
