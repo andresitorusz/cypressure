@@ -19,6 +19,7 @@
 ### Setup
 Read the setup and how to run guide in the app folder **README**.
 
+
 ### Misc
 ##### App list
 - [Petstore](https://petstore3.swagger.io/)
@@ -33,9 +34,9 @@ Read the setup and how to run guide in the app folder **README**.
 
 
 ### Q&A
-TBD
+- ...
 
 ### Reference
 
-1. [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
-2. [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
+- [Why Cypress?](https://docs.cypress.io/guides/overview/why-cypress)
+- [Cypress - Writing Your First E2E Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
