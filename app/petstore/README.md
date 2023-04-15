@@ -18,7 +18,7 @@
 
 1. Navigate to `app/petstore`.
 2. Install the **node_modules** by running `npm install`.
-3. Run `npm run cy` or `npx cypress open` to open the test UI.
+3. Run `npm run cy` or `npx cypress open` to open Cypress UI. Or, run `npx cypress run` to run the tests in CLI.
 4. Run the tests.
 
 ### Result
