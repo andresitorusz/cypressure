@@ -1,6 +1,4 @@
-# Cypressure - Learning Cypress
-
-## [Swagger Petstore - OpenAPI 3.0](https://petstore3.swagger.io/)
+# [Swagger Petstore - OpenAPI 3.0](https://petstore3.swagger.io/)
 
 ### Setup
 
