@@ -22,7 +22,7 @@ Read the setup and how to run guide in the app folder **README**.
 
 ### Misc
 ##### App list
-- [Swagger Petstore - OpenAPI 3.0](https://github.com/andresitorusz/cypressure/tree/main/app/petstore) [[Jump to the API Documentation]](https://petstore3.swagger.io/)
+- [Swagger Petstore - OpenAPI 3.0](https://github.com/andresitorusz/cypressure/tree/main/app/petstore)
 - ...
 
 ##### IDE setup and recommended extensions
