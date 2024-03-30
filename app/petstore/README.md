@@ -10,7 +10,7 @@
 ##### Steps
 
 1. Run `git clone https://github.com/enchant3dmango/cypressure.git` in your Terminal.
-2. Run `cd learning-cypress`. In learning **learning-cypress** folder, there will be several app.
+2. Run `cd cypressure`. In learning **cypress** folder, there will be several app.
 
 ### Run tests
 
