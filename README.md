@@ -17,7 +17,7 @@
 
 
 ### Setup
-Read the setup and how to run guide in the app folder **README**.
+Read the setup and how-to-run guide in the app folder **README**.
 
 
 ### Misc
